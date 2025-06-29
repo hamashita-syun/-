@@ -22,6 +22,22 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/notification_1', function () {
+    return view('notification_1');
+})->name('notification_1');
+
+Route::get('/adminlogin_1', function () {
+    return view('adminlogin_1');
+})->name('admin.login_1');
+
+Route::get('/adminlogin_2', function () {
+    return view('adminlogin_2');
+})->name('admin.login_2');
+
+Route::get('/notification_2', function () {
+    return view('notification_2');
+})->name('notification_2');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
