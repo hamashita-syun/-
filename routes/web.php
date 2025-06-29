@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -37,6 +37,12 @@ Route::get('/adminlogin_2', function () {
 Route::get('/notification_2', function () {
     return view('notification_2');
 })->name('notification_2');
+
+
+Route::get('/congraturations1', function () {
+    session(['has_accessed1' => true]); // セッションにフラグを設定
+    return view('congraturations1'); // 表示するビューを指定
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

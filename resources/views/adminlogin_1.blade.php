@@ -13,7 +13,7 @@
     </div>
 
     <div class="flex justify-center pt-10">
-        <form id="loginForm" class="w-1/2 bg-white shadow-md rounded-lg p-8">
+        <form id="loginForm" class="w-1/2 bg-white shadow-md rounded-lg p-8" onsubmit="handleLogin(event)">
             <div class="form-control my-4">
                 <label for="email" class="label">
                     <span class="label-text font-semibold">Email</span>
@@ -45,9 +45,11 @@
             const messageElement = document.getElementById('message');
 
             if (email === validEmail && password === validPassword) {
-                messageElement.textContent = "Login successful! Welcome!";
+                messageElement.textContent = "Login successful! Redirecting...";
                 messageElement.classList.remove('text-red-500');
                 messageElement.classList.add('text-green-500');
+
+                window.location.href = '/congraturations1';
             } else {
                 messageElement.textContent = "Invalid email or password.";
                 messageElement.classList.remove('text-green-500');
