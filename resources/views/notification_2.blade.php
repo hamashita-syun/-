@@ -15,7 +15,7 @@
         <div class="space-y-4">
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
-                    <h2 class="card-title">お知らせタイトル1</h2>
+                    <h2 class="card-title">はじめまして！</h2>
                     <p>HTMLとPHPを新しく学び始めました！これから様々なことを学んでいく予定です</p>
                     <div class="card-actions justify-end">
                         <span class="text-sm text-gray-500">投稿日: xxxx年06月1日</span>
@@ -28,8 +28,9 @@
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
                     <h2 class="card-title">重要なお知らせ</h2>
-                    <p>最近、ログインページにパスワードをハードコーディングしてしまったことが原因で、データが流出する危険性がありました。この経験から、セキュリティの重要性を学びました。</p>
-                    <p>今後は、パスワードや機密情報をコードに直接書かないようにし、環境変数や設定ファイルを使用するようにします。</p>
+                    <p>最近、ログインページにパスワードを暗号化せずに記載してしまったことが原因で、このブログが乗っ取られました。</p>
+                    <p>インターネットって怖いですね＞＜</p>
+                    <p>こんどはしっかり暗号化したので、これからがんばっておしらせを投稿していきたいです！</p>
                     <div class="card-actions justify-end">
                         <span class="text-sm text-gray-500">投稿日: xxxx年06月6日</span>
                     </div>

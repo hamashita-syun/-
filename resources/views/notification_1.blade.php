@@ -15,10 +15,10 @@
         <div class="space-y-4">
             <div class="card bg-base-100 shadow-lg">
                 <div class="card-body">
-                    <h2 class="card-title">お知らせタイトル1</h2>
+                    <h2 class="card-title">はじめまして！</h2>
                     <p>HTMLとPHPを新しく学び始めました！これから様々なことを学んでいく予定です</p>
                     <div class="card-actions justify-end">
-                        <span class="text-sm text-gray-500">投稿日: 2023年10月1日</span>
+                        <span class="text-sm text-gray-500">投稿日: 202x年10月1日</span>
                     </div>
                 </div>
             </div>

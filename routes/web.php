@@ -39,10 +39,15 @@ Route::get('/notification_2', function () {
 })->name('notification_2');
 
 
-Route::get('/congraturations1', function () {
-    session(['has_accessed1' => true]); // セッションにフラグを設定
-    return view('congraturations1'); // 表示するビューを指定
-});
+Route::get('/congratulations1', function () {
+    session(['has_accessed1' => true]); 
+    return view('congratulations1'); 
+})->name('clear_1');
+
+Route::get('/congratulations2A', function () {
+    session(['has_accessed2' => true]); 
+    return view('congratulations2A'); 
+})->name('congratulations2A');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

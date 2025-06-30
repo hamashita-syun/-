@@ -49,7 +49,7 @@
                 messageElement.classList.remove('text-red-500');
                 messageElement.classList.add('text-green-500');
 
-                window.location.href = '/congraturations1';
+                window.location.href = '/congratuations1';
             } else {
                 messageElement.textContent = "Invalid email or password.";
                 messageElement.classList.remove('text-green-500');
