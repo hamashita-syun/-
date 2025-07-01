@@ -44,10 +44,10 @@ Route::get('/congratulations1', function () {
     return view('congratulations1'); 
 })->name('clear_1');
 
-Route::get('/congratulations2A', function () {
+Route::get('/congratulations2', function () {
     session(['has_accessed2' => true]); 
-    return view('congratulations2A'); 
-})->name('congratulations2A');
+    return view('congratulations2'); 
+})->name('congratulations2');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

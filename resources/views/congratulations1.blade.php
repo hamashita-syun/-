@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>You Win!</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <script>
+        if (sessionStorage.getItem('loggedIn1') !== 'true') {
+            window.location.href = '/';
+        }
+    </script>
     <style>
         @keyframes blink {
             0%, 100% {
@@ -36,5 +41,6 @@
     昔飼ってた犬の名前はロード 趣味はDDR
 </p>
     </div>
+
 </body>
 </html>

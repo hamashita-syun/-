@@ -34,28 +34,29 @@
     </div>
 
     <script>
-        function handleLogin(event) {
-            event.preventDefault();
+function handleLogin(event) {
+    event.preventDefault();
 
-            const validEmail = "user@example.com";
-            const validPassword = "password123";
+    const validEmail = "user@example.com";
+    const validPassword = "password123";
 
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const messageElement = document.getElementById('message');
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const messageElement = document.getElementById('message');
 
-            if (email === validEmail && password === validPassword) {
-                messageElement.textContent = "Login successful! Redirecting...";
-                messageElement.classList.remove('text-red-500');
-                messageElement.classList.add('text-green-500');
+    if (email === validEmail && password === validPassword) {
+        messageElement.textContent = "Login successful! Redirecting...";
+        messageElement.classList.remove('text-red-500');
+        messageElement.classList.add('text-green-500');
+        sessionStorage.setItem('loggedIn1', 'true');
 
-                window.location.href = '/congratuations1';
-            } else {
-                messageElement.textContent = "Invalid email or password.";
-                messageElement.classList.remove('text-green-500');
-                messageElement.classList.add('text-red-500');
-            }
-        }
+        window.location.href = '/congratulations1';
+    } else {
+        messageElement.textContent = "Invalid email or password.";
+        messageElement.classList.remove('text-green-500');
+        messageElement.classList.add('text-red-500');
+    }
+}
     </script>
 </body>
 </html>

@@ -37,28 +37,28 @@
     </div>
 
 <script>
-    const redirectUrl = "{{ route('congratularion2') }}";
-function handleLogin(event) {
-    event.preventDefault();
-    const validEmail = "user@example.com";
-    const email = document.getElementById('email').value;
-    const input = document.getElementById('input').value;
-    const messageElement = document.getElementById('message');
+    function handleLogin(event) {
+        event.preventDefault();
+        const validEmail = "user@example.com";
+        const email = document.getElementById('email').value;
+        const input = document.getElementById('input').value;
+        const messageElement = document.getElementById('message');
 
-    const hashedInput = CryptoJS.SHA256(input).toString();
+        const hashedInput = CryptoJS.SHA256(input).toString();
 
-    if (email === validEmail && hashedInput === "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f") {
-        messageElement.textContent = "Login successful! Redirecting...";
-        messageElement.classList.remove('text-red-500');
-        messageElement.classList.add('text-green-500');
+        if (email === validEmail && hashedInput === "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f") {
+            messageElement.textContent = "Login successful! Redirecting...";
+            messageElement.classList.remove('text-red-500');
+            messageElement.classList.add('text-green-500');
 
-        window.location.href = redirectUrl; // Laravelのrouteを使う
-    } else {
-        messageElement.textContent = "Invalid input. Hashed input: " + hashedInput;
-        messageElement.classList.remove('text-green-500');
-        messageElement.classList.add('text-red-500');
+            sessionStorage.setItem('loggedIn2', 'true');
+            window.location.href = '/congratulations2A';
+        } else {
+            messageElement.textContent = "Invalid input. Hashed input: " + hashedInput;
+            messageElement.classList.remove('text-green-500');
+            messageElement.classList.add('text-red-500');
+        }
     }
-}
 </script>
 </body>
 </html>
