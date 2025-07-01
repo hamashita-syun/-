@@ -34,12 +34,12 @@
 
     <!-- ボタン3 -->
     <a href="{{ session('has_accessed2') ? route('admin.login_2') : '#' }}" class="flex items-center justify-center h-16 bg-pink-500 text-white font-extrabold text-3xl rounded-lg border-4 border-blue-400 shadow-lg hover:bg-pink-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
-        その3 🌈
+        未実装 🌈
     </a>
 
     <!-- ボタン4 -->
     <a href="{{ session('has_accessed2') ? route('admin.login_2') : '#' }}" class="flex items-center justify-center h-16 bg-teal-500 text-purple-800 font-extrabold text-3xl rounded-lg border-4 border-orange-400 shadow-lg hover:bg-teal-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
-        その4 🎉
+       未実装装 🎉
     </a>
 </div>
 

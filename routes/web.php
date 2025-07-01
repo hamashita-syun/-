@@ -40,9 +40,13 @@ Route::get('/notification_2', function () {
 
 
 Route::get('/congratulations1', function () {
-    session(['has_accessed1' => true]); 
-    return view('congratulations1'); 
+    return view('congratulations1');
 })->name('clear_1');
+
+Route::post('/api/set-accessed1', function (Request $request) {
+    session(['has_accessed1' => true]);
+    return response()->json(['message' => 'Session flag set']);
+});
 
 Route::get('/congratulations2', function () {
     session(['has_accessed2' => true]); 

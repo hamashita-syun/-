@@ -26,19 +26,32 @@
         <a href="{{ route('welcome') }}" class="mt-16 bg-blue-500 hover:bg-blue-700 text-white font-bold py-6 px-12 rounded">
             Go to Top Page
         </a>
-<p class="mt-8 text-4xl font-extrabold text-purple-500 bg-yellow-200 p-2 transition-transform duration-300 transform hover:scale-105">
-    身長:183cm 体重:87 二郎系ラーメンにはまって週2で通い始めた結果7kg太った
-</p>
-<p class="mt-8 text-4xl font-extrabold text-orange-600 bg-blue-200 p-2 transition-transform duration-300 transform hover:scale-105">
-    かわいいもの好き 最近ポムポムプリンのぬいぐるみをもらってご満悦
-</p>
-<p class="mt-8 text-4xl font-extrabold text-red-600 bg-green-200 p-2 transition-transform duration-300 transform hover:scale-105">
-    高校生の時陸上部に入るが、3か月で学校ごとやめた
-</p>
+
     </div>
     <script>
-        if (sessionStorage.getItem('loggedIn2') !== 'true') {
-            window.location.href = '/';
+
+        const csrfToken = '{{ csrf_token() }}';
+
+    if (sessionStorage.getItem('loggedIn2') !== 'true') {
+        alert('不正なアクセスが検出されました。トップページへリダイレクトします。');
+        window.location.href = '/';
+    }else {
+            // loggedIn1 === 'true'なら、サーバーにPOSTしてセッションをセット
+            fetch('/api/set-accessed2', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': csrfToken,
+                },
+                body: JSON.stringify({}),
+                credentials: 'same-origin'
+            }).then(response => {
+                if (!response.ok) {
+                    console.error('Failed to set server session');
+                }
+            }).catch(e => {
+                console.error('Error:', e);
+            });
         }
     </script>
 </body>
