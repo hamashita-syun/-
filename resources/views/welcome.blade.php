@@ -40,9 +40,7 @@
     </a>
 
     <!-- ボタン4 -->
-    <a href="{{ session('has_accessed3') ? route('admin.login_3') : '#' }}" class="flex items-center justify-center h-16 bg-teal-500 text-purple-800 font-extrabold text-3xl rounded-lg border-4 border-orange-400 shadow-lg hover:bg-teal-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
-       未実装 🎉
-    </a>
+
 </div>
 
 </body>

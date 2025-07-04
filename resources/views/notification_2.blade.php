@@ -50,7 +50,7 @@
                 </div>
             </div>
         <div class="mt-6">
-            <a href="{{ route('admin.login_3') }}" class="btn btn-primary">管理者用ログインページにアクセス</a>
+            <a href="{{ route('admin.login_2') }}" class="btn btn-primary">管理者用ログインページにアクセス</a>
         </div>
     </div>
 </body>
