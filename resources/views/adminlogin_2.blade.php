@@ -52,7 +52,7 @@
             messageElement.classList.add('text-green-500');
 
             sessionStorage.setItem('loggedIn2', 'true');
-            window.location.href = '/congratulations2A';
+            window.location.href = '/congratulations2';
         } else {
             messageElement.textContent = "Invalid input. Hashed input: " + hashedInput;
             messageElement.classList.remove('text-green-500');

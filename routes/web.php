@@ -34,9 +34,17 @@ Route::get('/adminlogin_2', function () {
     return view('adminlogin_2');
 })->name('admin.login_2');
 
+Route::get('/adminlogin_3', function () {
+    return view('adminlogin_3');
+})->name('admin.login_3');
+
 Route::get('/notification_2', function () {
     return view('notification_2');
 })->name('notification_2');
+
+Route::get('/notification_3', function () {
+    return view('notification_3');
+})->name('notification_3');
 
 
 Route::get('/congratulations1', function () {
@@ -52,6 +60,12 @@ Route::get('/congratulations2', function () {
     session(['has_accessed2' => true]); 
     return view('congratulations2'); 
 })->name('congratulations2');
+
+
+Route::get('/congratulations3', function () {
+    session(['has_accessed2' => true]); 
+    return view('congratulations3');
+})->name('congratulations3');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

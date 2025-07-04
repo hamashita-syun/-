@@ -36,9 +36,21 @@
                     </div>
                 </div>
             </div>
-
+            <!-- 新しいお知らせカードを追加 -->
+            <div class="card bg-base-100 shadow-lg">
+                <div class="card-body">
+                    <h2 class="card-title">反省と今後について</h2>
+                    <p>つい先日、ログインページの処理をすべてフロントエンドで済ませていました。</p>
+                    <p>その結果、認証情報が簡単に盗まれてしまい、またしてもトラブルに・・・。</p>
+                    <p>やっぱり認証はサーバーサイドで安全に処理しないとダメですね＞＜</p>
+                    <p>今度こそちゃんとサーバーサイド認証に切り替えたので、これからまた地道に頑張っていきます！</p>
+                    <div class="card-actions justify-end">
+                        <span class="text-sm text-gray-500">投稿日: xxxx年06月10日</span>
+                    </div>
+                </div>
+            </div>
         <div class="mt-6">
-            <a href="{{ route('admin.login_2') }}" class="btn btn-primary">管理者用ログインページにアクセス</a>
+            <a href="{{ route('admin.login_3') }}" class="btn btn-primary">管理者用ログインページにアクセス</a>
         </div>
     </div>
 </body>

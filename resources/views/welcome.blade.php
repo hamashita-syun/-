@@ -17,6 +17,8 @@
         <p class="text-4xl font-extrabold text-green-600 mt-4 animate-bounce" style="text-shadow: 2px 2px 0 rgba(0, 0, 255, 0.5);">
             すっごいハッキングチャレンジだよ！
         </p>
+        <p>その1回答:user@example.com/password123 その2:user@example.com/12345678 </p>
+        <p>その3回答:/congratulations3にアクセス その2:user@example.com/12345678 </p>
 
         
     </div>
@@ -34,12 +36,12 @@
 
     <!-- ボタン3 -->
     <a href="{{ session('has_accessed2') ? route('admin.login_2') : '#' }}" class="flex items-center justify-center h-16 bg-pink-500 text-white font-extrabold text-3xl rounded-lg border-4 border-blue-400 shadow-lg hover:bg-pink-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
-        未実装 🌈
+        その3 🌈
     </a>
 
     <!-- ボタン4 -->
-    <a href="{{ session('has_accessed2') ? route('admin.login_2') : '#' }}" class="flex items-center justify-center h-16 bg-teal-500 text-purple-800 font-extrabold text-3xl rounded-lg border-4 border-orange-400 shadow-lg hover:bg-teal-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
-       未実装装 🎉
+    <a href="{{ session('has_accessed3') ? route('admin.login_3') : '#' }}" class="flex items-center justify-center h-16 bg-teal-500 text-purple-800 font-extrabold text-3xl rounded-lg border-4 border-orange-400 shadow-lg hover:bg-teal-600 hover:scale-110 transition duration-200 transform {{ session('has_accessed2') ? '' : 'cursor-not-allowed opacity-50' }}">
+       未実装 🎉
     </a>
 </div>
 
